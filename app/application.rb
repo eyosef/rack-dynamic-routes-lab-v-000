@@ -14,7 +14,7 @@ class Application
       item = @@items.find{|i| i.name == item_name}
       if item == nil
         resp.status = 400
-        resp.write = "Item not found"
+        resp.write "Item not found"
       else
         resp.write "#{item.price}"
       end
