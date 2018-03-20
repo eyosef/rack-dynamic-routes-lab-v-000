@@ -16,6 +16,6 @@ class Application
       resp.write "#{item.price}"
       #[Item.new("Figs",3.42),Item.new("Pears",0.99)])
     end #if statement
-
+    resp.finish
   end #call method
 end
