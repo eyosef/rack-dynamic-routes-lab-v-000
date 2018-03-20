@@ -15,15 +15,9 @@ class Application
 
       if item == nil
         resp.status = 400
-      else 
+      else
         resp.write "#{item.price}"
       end
-
-    else req.path.match("/items/")
-      req.path.match("/items/")
-      item_name = req.path.split("/items/").last
-      item = @@items.find{|i| i.name == item_name}
-      #[Item.new("Figs",3.42),Item.new("Pears",0.99)])
     end #if statement
     resp.finish
   end #call method
