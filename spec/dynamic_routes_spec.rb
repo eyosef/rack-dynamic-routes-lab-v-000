@@ -1,5 +1,5 @@
 require_relative './spec_helper'
-require'pry'
+require 'pry'
 describe "Shopping Cart Rack App" do
   def app()
     Application.new
@@ -7,7 +7,6 @@ describe "Shopping Cart Rack App" do
 
   it 'Returns 404 for a bad route' do
     get '/testing'
-    binding.pry
     expect(last_response.body).to include("Route not found")
     expect(last_response.status).to be(404)
   end
