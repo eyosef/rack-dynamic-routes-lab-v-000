@@ -14,9 +14,9 @@ class Application
       item = @@items.find{|i| i.name == item_name}
 
       if item == nil
-        resp.status = 400 
+        resp.status = 400
       end
-      
+
     else req.path.match("/items/")
       req.path.match("/items/")
       item_name = req.path.split("/items/").last
